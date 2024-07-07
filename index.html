@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/styles/tailwindcss/output.css" />
+    <link rel="stylesheet" href="./src/styles/style.css" />
+    <title>JS | Form With Validation</title>
+  </head>
+  <body>
+    <main class="h-screen">
+      <div
+        class="h-full overflow-x-hidden overflow-y-auto text-center after:content-[''] after:w-0 after:h-full after:inline-block after:align-middle"
+      >
+        <div
+          class="relative inline-block w-[95%] px-4 text-left align-middle sm:max-w-xl lg:max-w-2xl"
+        >
+          <div class="w-full p-6 md:p-10 rounded-xl bg-zinc-100 grid gap-12">
+            <h4 class="text-3xl sm:text-4xl font-semibold">Welcome Join Us.</h4>
+            <form id="form" class="w-full flex flex-col gap-3">
+              <div class="flex flex-col sm:flex-row gap-6">
+                <div id="firstName-field" class="grid flex-1 gap-2">
+                  <label role="label" for="firstName">First Name</label>
+                  <input
+                    role="input"
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    placeholder="Enter your first name"
+                  />
+                  <span role="error" class="text-red-600 text-sm h-5"></span>
+                </div>
+                <div id="lastName-field" class="grid flex-1 gap-2">
+                  <label role="label" for="lastName">Last Name</label>
+                  <input
+                    role="input"
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    placeholder="Enter your last name"
+                  />
+                  <span role="error" class="text-red-600 text-sm h-5"></span>
+                </div>
+              </div>
+
+              <div id="email-field" class="grid gap-2">
+                <label role="label" for="email">Email</label>
+                <input
+                  role="input"
+                  type="text"
+                  id="email"
+                  name="email"
+                  placeholder="Enter your email"
+                />
+                <span role="error" class="text-red-600 text-sm h-5"></span>
+              </div>
+
+              <div class="flex flex-col sm:flex-row gap-6">
+                <div id="password-field" class="grid flex-1 gap-2">
+                  <label role="label" for="password">Password</label>
+                  <input
+                    role="input"
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter your password"
+                  />
+                  <span role="error" class="text-red-600 text-sm h-5"></span>
+                </div>
+                <div id="passwordConfirm-field" class="grid flex-1 gap-2">
+                  <label role="label" for="passwordConfirm"
+                    >Password Confirm</label
+                  >
+                  <input
+                    role="input"
+                    type="password"
+                    id="passwordConfirm"
+                    name="passwordConfirm"
+                    placeholder="Enter your password again"
+                  />
+                  <span role="error" class="text-red-600 text-sm h-5"></span>
+                </div>
+              </div>
+
+              <button
+                type="submit"
+                class="bg-blue-500 text-white py-4 rounded-lg"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
