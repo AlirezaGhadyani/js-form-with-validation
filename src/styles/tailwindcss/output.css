@@ -1372,8 +1372,8 @@ video {
   justify-items: stretch;
 }
 
-.gap-12 {
-  gap: 3rem;
+.gap-14 {
+  gap: 3.5rem;
 }
 
 .gap-2 {
@@ -1384,16 +1384,12 @@ video {
   gap: 0.75rem;
 }
 
-.gap-6 {
-  gap: 1.5rem;
-}
-
 .gap-4 {
   gap: 1rem;
 }
 
-.gap-14 {
-  gap: 3.5rem;
+.gap-6 {
+  gap: 1.5rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -1983,6 +1979,16 @@ video {
   padding-bottom: 1rem;
 }
 
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2049,25 +2055,16 @@ video {
   line-height: 1.25rem;
 }
 
-.text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-
 .font-bold {
   font-weight: 700;
 }
 
-.font-semibold {
-  font-weight: 600;
-}
-
-.font-medium {
-  font-weight: 500;
-}
-
 .font-light {
   font-weight: 300;
+}
+
+.font-semibold {
+  font-weight: 600;
 }
 
 .uppercase {
@@ -2614,39 +2611,8 @@ video {
   text-align: center;
 }
 
-.aria-\[has-error\=true\]\:text-red-600[aria-has-error=true] {
-  --tw-text-opacity: 1;
-  color: rgb(220 38 38 / var(--tw-text-opacity));
-}
-
-.aria-\[invalid\=true\]\:text-red-600[aria-invalid=true] {
-  --tw-text-opacity: 1;
-  color: rgb(220 38 38 / var(--tw-text-opacity));
-}
-
-.aria-\[invalid\=true\]\:outline-red-600[aria-invalid=true] {
-  outline-color: #dc2626;
-}
-
 .aria-\[invalid\=true\]\:outline-red-400[aria-invalid=true] {
   outline-color: #f87171;
-}
-
-.aria-\[invalid\=true\]\:outline-red-300[aria-invalid=true] {
-  outline-color: #fca5a5;
-}
-
-.data-\[size\=large\]\:p-8[data-size=large] {
-  padding: 2rem;
-}
-
-.data-\[has\=large\]\:p-8[data-has=large] {
-  padding: 2rem;
-}
-
-.data-\[has-error\=true\]\:text-red-500[data-has-error=true] {
-  --tw-text-opacity: 1;
-  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
 .data-\[has-error\=true\]\:text-red-600[data-has-error=true] {
@@ -2668,19 +2634,9 @@ video {
     line-height: 2.5rem;
   }
 
-  .sm\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-
   .sm\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
-  }
-
-  .sm\:text-sm {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
   }
 
   .sm\:underline {
