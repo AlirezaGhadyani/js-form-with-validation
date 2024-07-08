@@ -1,3 +1,5 @@
+import fieldValidator from "./fieldValidator";
+
 const formValidator = (formFields, type) => {
   let result = {};
 
@@ -10,36 +12,26 @@ const formValidator = (formFields, type) => {
       (v) => v.role === "error"
     );
 
-    const validator = () => {
-      const fieldValue = fieldInputEl.value;
-      let fieldValidationResult = {};
-
-      formFields[fieldKey].forEach((validator) => {
-        const relatedFieldEl = formFields[validator.relatedField]?.element;
-
-        const isValid = validator.relatedField
-          ? validator.fn(fieldValue, relatedFieldEl?.value)
-          : validator.fn(fieldValue);
-
-        const hasError = !(fieldValidationResult.hasError && isValid);
-        const message = fieldValidationResult.message || validator.message;
-
-        fieldValidationResult = {
-          hasError,
-          message: !isValid ? message : "",
-        };
+    const validatorHandler = () => {
+      const fieldValidationResult = fieldValidator(formFields[fieldKey], {
+        field: fieldEl,
+        input: fieldInputEl,
+        error: fieldErrorEl,
       });
-
-      fieldErrorEl.innerText = fieldValidationResult.message;
 
       result = { ...result, [fieldKey]: fieldValidationResult };
     };
 
-    if (type === "input") fieldInputEl.addEventListener("input", validator);
-    else validator();
+    if (type === "input") {
+      fieldInputEl.addEventListener("input", validatorHandler);
+    } else validatorHandler();
   });
 
-  return result;
+  return {
+    // ? A flag for checking hole form validation status
+    hasError: Object.values(result).some((v) => v.hasError),
+    fields: result,
+  };
 };
 
 export default formValidator;

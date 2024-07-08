@@ -2,6 +2,7 @@ import {
   requiredValidator,
   emailValidator,
   complexPasswordValidator,
+  passwordMatchValidator,
 } from "./utils/validators";
 import formValidator from "./utils/formValidator";
 
@@ -48,7 +49,7 @@ const formFields = {
     },
     {
       relatedField: "password",
-      fn: (value, relatedFieldValue) => value === relatedFieldValue,
+      fn: passwordMatchValidator,
       message: "Password is not match",
     },
   ],
@@ -62,7 +63,14 @@ const formEl = document.getElementById("form");
 
 // * Handle submit form
 formEl.addEventListener("submit", (event) => {
+  // ? Prevent form default behavior
   event.preventDefault();
-  const validation = formValidator(formFields, "submit");
-  console.log("validation: ", validation);
+
+  // ? check form has error
+  const validationResult = formValidator(formFields, "submit");
+
+  if (validationResult.hasError)
+    return Promise.reject("error: form has validation error");
+
+  alert("You have signed up successfully cheers 🍻.");
 });

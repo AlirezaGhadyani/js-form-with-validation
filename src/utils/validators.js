@@ -37,3 +37,8 @@ export const complexPasswordValidator = (password) => {
 
   return true;
 };
+
+export const passwordMatchValidator = (passwordConfirm, password) => {
+  if (!passwordConfirm) return false;
+  return passwordConfirm === password;
+};

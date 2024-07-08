@@ -15,11 +15,19 @@
         <div
           class="relative inline-block w-[95%] px-4 text-left align-middle sm:max-w-xl lg:max-w-2xl"
         >
-          <div class="w-full p-6 md:p-10 rounded-xl bg-zinc-100 grid gap-12">
-            <h4 class="text-3xl sm:text-4xl font-semibold">Welcome Join Us.</h4>
-            <form id="form" class="w-full flex flex-col gap-3">
-              <div class="flex flex-col sm:flex-row gap-6">
-                <div id="firstName-field" class="grid flex-1 gap-2">
+          <div class="grid w-full p-6 gap-14 md:p-10 rounded-xl bg-zinc-100">
+            <div class="grid gap-4">
+              <h4 class="text-3xl font-semibold sm:text-4xl">Sign Up</h4>
+              <p class="text-sm font-light sm:text-base">
+                Welcome to our website we will be happy to Join Us.
+              </p>
+            </div>
+            <form id="form" class="flex flex-col w-full gap-3">
+              <div class="flex flex-col gap-6 sm:flex-row">
+                <div
+                  id="firstName-field"
+                  class="grid flex-1 gap-2 data-[has-error=true]:text-red-600"
+                >
                   <label role="label" for="firstName">First Name</label>
                   <input
                     role="input"
@@ -27,10 +35,14 @@
                     id="firstName"
                     name="firstName"
                     placeholder="Enter your first name"
+                    class="aria-[invalid=true]:outline-red-400"
                   />
-                  <span role="error" class="text-red-600 text-sm h-5"></span>
+                  <span role="error" class="h-5 text-sm text-red-600"></span>
                 </div>
-                <div id="lastName-field" class="grid flex-1 gap-2">
+                <div
+                  id="lastName-field"
+                  class="grid flex-1 gap-2 data-[has-error=true]:text-red-600"
+                >
                   <label role="label" for="lastName">Last Name</label>
                   <input
                     role="input"
@@ -38,12 +50,16 @@
                     id="lastName"
                     name="lastName"
                     placeholder="Enter your last name"
+                    class="aria-[invalid=true]:outline-red-400"
                   />
-                  <span role="error" class="text-red-600 text-sm h-5"></span>
+                  <span role="error" class="h-5 text-sm text-red-600"></span>
                 </div>
               </div>
 
-              <div id="email-field" class="grid gap-2">
+              <div
+                id="email-field"
+                class="grid gap-2 data-[has-error=true]:text-red-600"
+              >
                 <label role="label" for="email">Email</label>
                 <input
                   role="input"
@@ -51,12 +67,16 @@
                   id="email"
                   name="email"
                   placeholder="Enter your email"
+                  class="aria-[invalid=true]:outline-red-400"
                 />
-                <span role="error" class="text-red-600 text-sm h-5"></span>
+                <span role="error" class="h-5 text-sm text-red-600"></span>
               </div>
 
-              <div class="flex flex-col sm:flex-row gap-6">
-                <div id="password-field" class="grid flex-1 gap-2">
+              <div class="flex flex-col gap-6 sm:flex-row">
+                <div
+                  id="password-field"
+                  class="grid flex-1 gap-2 data-[has-error=true]:text-red-600"
+                >
                   <label role="label" for="password">Password</label>
                   <input
                     role="input"
@@ -64,10 +84,14 @@
                     id="password"
                     name="password"
                     placeholder="Enter your password"
+                    class="aria-[invalid=true]:outline-red-400"
                   />
-                  <span role="error" class="text-red-600 text-sm h-5"></span>
+                  <span role="error" class="h-5 text-sm text-red-600"></span>
                 </div>
-                <div id="passwordConfirm-field" class="grid flex-1 gap-2">
+                <div
+                  id="passwordConfirm-field"
+                  class="grid flex-1 gap-2 data-[has-error=true]:text-red-600"
+                >
                   <label role="label" for="passwordConfirm"
                     >Password Confirm</label
                   >
@@ -77,14 +101,15 @@
                     id="passwordConfirm"
                     name="passwordConfirm"
                     placeholder="Enter your password again"
+                    class="aria-[invalid=true]:outline-red-400"
                   />
-                  <span role="error" class="text-red-600 text-sm h-5"></span>
+                  <span role="error" class="h-5 text-sm text-red-600"></span>
                 </div>
               </div>
 
               <button
                 type="submit"
-                class="bg-blue-500 text-white py-4 rounded-lg"
+                class="py-4 mt-4 text-white bg-blue-500 rounded-lg"
               >
                 Submit
               </button>

@@ -715,6 +715,10 @@ video {
   margin-top: 0.5rem;
 }
 
+.mt-4 {
+  margin-top: 1rem;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -814,16 +818,16 @@ video {
   display: none;
 }
 
+.h-5 {
+  height: 1.25rem;
+}
+
 .h-full {
   height: 100%;
 }
 
 .h-screen {
   height: 100vh;
-}
-
-.h-5 {
-  height: 1.25rem;
 }
 
 .w-\[95\%\] {
@@ -1376,6 +1380,10 @@ video {
   gap: 0.5rem;
 }
 
+.gap-3 {
+  gap: 0.75rem;
+}
+
 .gap-6 {
   gap: 1.5rem;
 }
@@ -1384,12 +1392,8 @@ video {
   gap: 1rem;
 }
 
-.gap-1 {
-  gap: 0.25rem;
-}
-
-.gap-3 {
-  gap: 0.75rem;
+.gap-14 {
+  gap: 3.5rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -2040,14 +2044,14 @@ video {
   line-height: 2.25rem;
 }
 
-.text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .font-bold {
@@ -2056,6 +2060,14 @@ video {
 
 .font-semibold {
   font-weight: 600;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-light {
+  font-weight: 300;
 }
 
 .uppercase {
@@ -2602,6 +2614,46 @@ video {
   text-align: center;
 }
 
+.aria-\[has-error\=true\]\:text-red-600[aria-has-error=true] {
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity));
+}
+
+.aria-\[invalid\=true\]\:text-red-600[aria-invalid=true] {
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity));
+}
+
+.aria-\[invalid\=true\]\:outline-red-600[aria-invalid=true] {
+  outline-color: #dc2626;
+}
+
+.aria-\[invalid\=true\]\:outline-red-400[aria-invalid=true] {
+  outline-color: #f87171;
+}
+
+.aria-\[invalid\=true\]\:outline-red-300[aria-invalid=true] {
+  outline-color: #fca5a5;
+}
+
+.data-\[size\=large\]\:p-8[data-size=large] {
+  padding: 2rem;
+}
+
+.data-\[has\=large\]\:p-8[data-has=large] {
+  padding: 2rem;
+}
+
+.data-\[has-error\=true\]\:text-red-500[data-has-error=true] {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
+.data-\[has-error\=true\]\:text-red-600[data-has-error=true] {
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity));
+}
+
 @media (min-width: 640px) {
   .sm\:max-w-xl {
     max-width: 36rem;
@@ -2614,6 +2666,21 @@ video {
   .sm\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .sm\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .sm\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .sm\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 
   .sm\:underline {
