@@ -8,51 +8,79 @@ import formValidator from "./utils/formValidator";
 
 // * Form Fields
 const formFields = {
-  firstName: [
-    {
-      fn: requiredValidator,
-      message: "First name is a required field",
-    },
-  ],
-  lastName: [
-    {
-      fn: requiredValidator,
-      message: "Last name is a required field",
-    },
-  ],
-  email: [
-    {
-      fn: requiredValidator,
-      message: "Email is a required field",
-    },
-    {
-      fn: emailValidator,
-      message: "Email is not valid",
-    },
-  ],
+  firstName: {
+    validators: [
+      {
+        fn: requiredValidator,
+        message: "First name is a required field",
+      },
+    ],
+  },
+  lastName: {
+    validators: [
+      {
+        fn: requiredValidator,
+        message: "Last name is a required field",
+      },
+    ],
+  },
+  email: {
+    validators: [
+      {
+        fn: requiredValidator,
+        message: "Email is a required field",
+      },
+      {
+        fn: emailValidator,
+        message: "Email is not valid",
+      },
+    ],
+  },
 
-  password: [
-    {
-      fn: requiredValidator,
-      message: "Password is a required field",
-    },
-    {
-      fn: complexPasswordValidator,
-      message:
-        "Include at least a lowercase, upper case and special characters",
-    },
-  ],
-  passwordConfirm: [
-    {
-      fn: requiredValidator,
-      message: "Password confirm is a required field",
-    },
-    {
-      relatedField: "password",
-      fn: passwordMatchValidator,
-      message: "Password is not match",
-    },
-  ],
+  password: {
+    validators: [
+      {
+        fn: requiredValidator,
+        message: "Password is a required field",
+      },
+      {
+        fn: complexPasswordValidator,
+        message:
+          "Include at least a lowercase, upper case and special characters",
+      },
+    ],
+  },
+  passwordConfirm: {
+    validators: [
+      {
+        fn: requiredValidator,
+        message: "Password confirm is a required field",
+      },
+      {
+        relatedField: "password",
+        fn: passwordMatchValidator,
+        message: "Password is not match",
+      },
+    ],
+  },
+  agreeTerms: {
+    type: "checkbox",
+    validators: [
+      {
+        fn: requiredValidator,
+        message: "Agree terms me is required field",
+      },
+    ],
+  },
+  country: {
+    type: "select",
+    validators: [
+      {
+        fn: requiredValidator,
+        message: "country is required field",
+      },
+    ],
+  },
 };
 
 // ? Handle form validation on inputs changes

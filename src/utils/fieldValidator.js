@@ -1,5 +1,18 @@
-const fieldValidator = (validators, elements) => {
-  const fieldValue = elements.input.value;
+const fieldTypeValue = (type, input) => {
+  switch (type) {
+    case "input":
+      return input.value;
+    case "checkbox":
+      return input.checked;
+    default:
+      return input.value;
+  }
+};
+
+const fieldValidator = (formField, elements) => {
+  const { validators, type = "input" } = formField;
+
+  const fieldValue = fieldTypeValue(type, elements.input);
   let fieldValidationResult = {};
 
   validators.forEach((validator) => {
@@ -30,7 +43,7 @@ const fieldValidator = (validators, elements) => {
   });
 
   // ? Set error message into markup
-  elements.error.innerText = fieldValidationResult.message;
+  if (elements?.error) elements.error.innerText = fieldValidationResult.message;
 
   // ? Set attributes into markup for better access
   elements.field.setAttribute("data-has-error", fieldValidationResult.hasError);

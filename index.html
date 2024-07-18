@@ -57,6 +57,20 @@
               </div>
 
               <div
+                id="country-field"
+                class="grid gap-2 items-center data-[has-error=true]:text-red-600"
+              >
+                <label role="label" for="country">Country</label>
+                <select id="country" class="w-full" name="country" role="input">
+                  <option value="" selected disabled hidden>Choose here</option>
+                  <option value="iran">iran</option>
+                  <option value="usa">usa</option>
+                  <option value="canada">canada</option>
+                </select>
+                <span role="error" class="h-5 text-sm text-red-600"></span>
+              </div>
+
+              <div
                 id="email-field"
                 class="grid gap-2 data-[has-error=true]:text-red-600"
               >
@@ -105,6 +119,22 @@
                   />
                   <span role="error" class="h-5 text-sm text-red-600"></span>
                 </div>
+              </div>
+
+              <div
+                id="agreeTerms-field"
+                class="flex gap-2 items-center data-[has-error=true]:text-red-600"
+              >
+                <label role="label" for="agreeTerms"
+                  >I agree to the terms</label
+                >
+                <input
+                  role="input"
+                  type="checkbox"
+                  id="agreeTerms"
+                  name="agreeTerms"
+                  class="aria-[invalid=true]:outline-red-400"
+                />
               </div>
 
               <button
